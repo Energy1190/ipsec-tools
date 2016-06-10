@@ -1,7 +1,9 @@
 FROM debian:jessie
 
-RUN apt-get install -qq racoon \
-		ipsec-tools
+RUN apt-get update && \
+	apt-get -y install racoon \
+		ipsec-tools \
+ && rm -rf /var/lib/apt/lists/*
 
 ADD entrypoint.sh /entrypoint.sh
  
