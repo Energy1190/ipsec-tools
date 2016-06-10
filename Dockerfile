@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 RUN apt-get update && \
-	apt-get -y install racoon \
+	apt-get -y -qq install racoon \
 		ipsec-tools \
  && rm -rf /var/lib/apt/lists/*
 
