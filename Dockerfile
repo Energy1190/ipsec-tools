@@ -6,8 +6,6 @@ RUN apt-get update && \
 		ipsec-tools \
  && rm -rf /var/lib/apt/lists/*
 
-ADD entrypoint.sh /entrypoint.sh
-
 EXPOSE 500/udp 4500/udp
 
 CMD ["/etc/init.d/setkey", "restart"]
