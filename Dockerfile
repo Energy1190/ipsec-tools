@@ -9,3 +9,4 @@ RUN apt-get update && \
 ADD entrypoint.sh /entrypoint.sh
  
 ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/usr/bin/tail", "-f", "/dev/null"]
