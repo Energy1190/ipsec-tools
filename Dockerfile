@@ -10,4 +10,4 @@ EXPOSE 500/udp 4500/udp
 
 CMD ["/etc/init.d/setkey", "restart"]
 CMD ["/etc/init.d/racoon", "restart"]
-CMD ["/usr/bin/tail", "-f", "/dev/null"]
+
